@@ -1,0 +1,136 @@
+<!--
+   PC html order sheet
+   Author: Jaime Rump
+   Date:  2023-02-01
+   Filename: pc.htm
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+   
+    <link rel="stylesheet" href="mill.css">
+    <link rel="stylesheet" href="oform.css">
+
+    <script src="C:\Users\jaime\OneDrive\Desktop\TRU\Jan - Aprl 2023\COMP 2681\JAIME_RUMP_ASSIGNMENT_3"></script>
+    <script src="https://kit.fontawesome.com/094a5bc91d.js" crossorigin="anonymous"></script>
+    <script src="formsubmit.js"></script>
+</head>
+<body>
+  
+    <button class="btn" onclick="myFunction()"><i class="fas fa-bars"></i></button>
+    <ul id="myLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#desktops">Desktops</a></li>
+        <li><a href="#laptops">Laptops</a></li>
+        <li><a href="#peripherals">Peripherals</a></li>
+        <li><a href="#support">Support</a></li>
+        <li><a href="#account">Your Account</a></li>
+        <li><a href="#shopping">Shopping Cart</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+    </ul>
+    <h1> Build Your Computer </h1>
+    <h3> * - required information </h3>
+    <form id="cOrder" action="http://www.mill_computers.com/order/process.cgi" method="post">
+        <div class="flex-container">
+            <div class="flex-item-left">
+                <fieldset>
+                    <legend> Contact Information </legend>
+                    <div class="flex-container_contactInfo">
+                        <div class="labels">
+                            <label for="fName">First Name *:</label><br>
+                            <label for="lName">Last Name *:</label><br>
+                            <label for="street">Street *:</label><br>
+                            <label for="city">City *: </label><br>
+                            <label for="province">Province *:</label><br>
+                            <label for="poscode">Poscode *:</label><br>
+                            <label for="phone">Phone *:</label>
+                        </div>
+                        <div class="inputs">
+                            <input type="text" id="fName" name="fName" size=15><br>
+                            <input type="text" id="lName" name="lName" size=15><br>
+                            <input type="text" id="street" name="street" size=15><br>
+                            <input type="text" id="city" name="city" size=15><br>
+                            <input type="text" id="province" name="province" size=15><br>
+                            <input type="text" id="poscode" name="poscode" size=15><br>
+                            <input type="text" id="phone" name="phone" size=15><br><br>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+            <div class="flex-item-right">
+                <fieldset>
+                    <legend> Computer Configuration </legend>
+                    <div class="flex-container_contactInfo">
+                        <div class="labels">
+                            <label for="processor">Processor Speed:</label><br>
+                            <label for="memory">Memory:</label><br>
+                            <label for="monitor">Monitor Size:</label><br>
+                            <label for="harddrive">Hard Drive:</label><br>
+                            <p>DVD Burner: </p>
+                            <p>LAN Card: </p>
+                            <p>Media Card Reader: </p>
+                        </div>
+                        <div class="inputs">
+                            <select name="processor" id="pSpeed">
+                                <option value="3.2 GHz">3.2 GHz</option>
+                                <option value="4 GHz">4 GHz</option>
+                                <option value="5.2 GHz">5.2 GHz</option>
+                            </select><br>
+                            <select name="memory" id="mem">
+                                <option value="1 GB">1 GB</option>
+                                <option value="2 GB">2 GB</option>
+                                <option value="4 GB">4 GB</option>
+                                <option value="8 GB">8 GB</option>
+                            </select> <br>
+                            <select name="monitor" id="monitor">
+                                <option value="15">15"</option>
+                                <option value="17">17"</option>
+                                <option value="19">19"</option>
+                                <option value="21">21"</option>
+                            </select> <br>
+                            <select name="harddrive" id="hd">
+                                <option value="240 GB">240 GB</option>
+                                <option value="500 GB">500 GB</option>
+                                <option value="750 GB">750 GB</option>
+                                <option value="1 TB">1 TB</option>
+                            </select> <br>
+                            <div class="dvd">
+                                <input type="radio" id="html" name="dvd_burner" value="Yes">
+                                <label for="Yes">YES</label>
+                                <input type="radio" id="css" name="dvd_burner" value="No">
+                                <label for="No">NO</label>
+                            </div>
+                            <div class="lan">
+                                <input type="radio" id="html" name="lan_card" value="Yes">
+                                <label for="Yes">YES</label>
+                                <input type="radio" id="css" name="lan_card" value="No">
+                                <label for="No">NO</label>
+                            </div>
+                            <div class="media">
+                                <input type="radio" id="html" name="media_card_reader" value="Yes">
+                                <label for="Yes">YES</label>
+                                <input type="radio" id="css" name="media_card_reader" value="No">
+                                <label for="No">NO</label>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+            <label for="vehicle1"> Yes, I want the 24-month extended warranty </label>
+        </div>
+        <div class="requests">
+            <label for="requests"> Any special requests for your order? </label> <br>
+            <input type="req" id="request" name="request">
+        </div>
+    </form>
+    <div class="buttons">
+        <input type="submit" onclick="validateForm()" value="Send Order">
+        <input type="submit" onclick="alert('Order Canceled!')" value="Cancel Order">
+        <input type="submit" onclick="alert('Let's Chat!')" value="Contact Me">
+    </div>
+    <p class="footer"> Millennium Computer • 100 Commerce Drive • Madison, WI 53597 • (608) 555 - 8441</p>
+</body>
+<!-- This is a comment to force a rebuild of index.html -->
+</html>
